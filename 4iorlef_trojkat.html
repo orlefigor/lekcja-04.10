@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>trójkąt</title>
+  </head>
+  <body>
+    <script>
+      let l1;
+      let l2;
+      let l3;
+      while (isNaN(l1)) {
+        l1 = parseInt(prompt("podaj 1 bok:"));
+      }
+      while (isNaN(l2)) {
+        l2 = parseInt(prompt("podaj 2 bok:"));
+      }
+      while (isNaN(l3)) {
+        l3 = parseInt(prompt("podaj 3 bok:"));
+      }
+      if (l1 + l2 > l3 && l1 + l3 > l2 && l2 + l3 > l1) {
+        document.write("można zrobić trójkąt");
+        document.write("<br>");
+        p = (l1 + l2 + l3) / 2;
+        y = p * (p - l1) * (p - l2) * (p - l3);
+        x = Math.sqrt(y).toFixed(2);
+        document.write(x);
+      } else {
+        document.write("nie można zrobić trójkąta");
+      }
+    </script>
+  </body>
+</html>
